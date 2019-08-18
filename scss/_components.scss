@@ -1,0 +1,208 @@
+header {
+    color: #fff; 
+}
+
+.nav-container {
+    height: 7rem;
+    background-color: $primary-color;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-main {
+    height: 100%;
+
+    &-list {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+
+        &-item {
+    
+            &-anchor {
+                font-size: 1.5rem;
+                padding: 1.5rem 3rem;
+                border: 1px solid $primary-color-lighter;
+                text-decoration: none;
+                color: inherit;
+                transition: background-color .5s;
+
+                &:hover {
+                    background-color: $header-hover-color;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem; 
+            }
+        }
+    }
+}
+
+.heading {
+    height: 54rem;
+    background-image: url(../img/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &-container {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        & > * {
+            font-weight: 40;
+        }
+    }
+
+    &-primary {
+        margin-bottom: 1rem;
+        font-size: 6rem;
+        text-transform: uppercase;
+        text-shadow: $primary-text-shadow;
+    }
+
+    &-secondary {
+        font-size: 2.5rem;
+    }   
+}
+
+.section-about {
+    padding: 6rem 8rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+        flex: 0 0 29%;
+        background-color: $card-color;
+
+        &-img {
+            width: 100%;
+        }
+
+        &-content {
+            padding: 1.5rem;
+        }
+
+        &-header {
+            font-weight: bold;
+            font-size: 2rem;
+            color: $card-text-color;
+            margin-bottom: 1rem;
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            word-wrap: break-word;
+            letter-spacing: .1rem; 
+        }
+
+        &-button {
+            text-decoration: none;
+            background: $card-text-color;
+            color: #fff;
+            border:none;
+            padding: 1rem 3rem;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.header-service {
+    background-image: url(../img/bg-2.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-attachment: fixed;
+    text-align: center;
+    padding: 6rem;
+    margin: auto;
+    color: #fff;
+
+    .heading-secondary-service {
+        margin-bottom: 1rem;
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-shadow: $primary-text-shadow;
+    }
+
+    .heading-third-service {
+        font-size: 1.7rem;
+    }
+
+    & > * {
+        font-weight: 40;
+    }
+}
+
+.service-content {
+    padding: 6rem 8rem;
+}
+
+.service-card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 23%;
+    background-color: $card-color;
+
+    &-content {
+        padding: 1rem 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .service-card-text-wrapper {
+            flex: 1 0 auto;
+        }
+    }
+
+    &-header {
+        font-weight: bold;
+        font-size: 2rem;
+        color: $service-card-text-color;
+        margin-bottom: 1rem;
+    }
+
+    &-text {
+        font-size: 1.4rem;
+        word-wrap: break-word;
+        letter-spacing: .1rem; 
+    }
+
+    &-button {
+        text-decoration: none;
+        background: #fff;
+        color: $service-card-text-color;
+        border:none;
+        padding: 1rem 3rem;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        margin-top: 2rem;
+        flex: 0 0 auto;
+        border-radius: 15%;
+        transition: all .5s;
+
+        &:hover {
+            background: $primary-color;
+            color: #fff;
+        }
+    }
+}
