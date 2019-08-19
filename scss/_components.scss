@@ -206,3 +206,149 @@ header {
         }
     }
 }
+
+.service-big {
+    background-color: $card-color;
+
+    &-img {
+        display: block;
+        width: 100%;
+        margin-top: 4rem;
+    }
+
+    &-content {
+        padding: 5rem 3rem;
+
+        &-header {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        &-button {
+            margin: 0;
+            margin-top: 2rem;
+            padding: 1.5rem 4rem;
+        }
+    }
+}
+
+.section-contact {
+    background-image: url(../img/bg-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 8rem 0;
+    text-align: center;
+    
+    .contact-container {
+        width: 55%;
+        margin: auto;
+        margin-top: 5rem;
+
+        .contact-header {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: $primary-text-shadow;
+        }
+
+        .contact-text {
+            background-color: rgba(242, 242, 242, 0.4);
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            color: #000;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            justify-content: space-between;
+
+            .inputs-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 0 1 55%;
+
+                .contact-input {
+                    flex: 0 1 25%;
+                    background-color: rgba(242, 242, 242, 0.4);
+                    border: none;
+                    padding: 1rem;
+                    border-radius: 10px;
+
+                    &::placeholder {
+                        color: #000;
+                    }
+                }
+            }
+
+            .contact-form-text {
+                flex: 0 1 40%;
+                background-color: rgba(242, 242, 242, 0.4);
+                border: none;
+                padding: 1rem;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .contact-form-button {
+        text-decoration: none;
+        background-color: #262628;
+        color: #fff;
+        border:none;
+        border-radius: 10px;
+        padding: 1.5rem 3.5rem;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        margin-top: 2rem;
+        transition: all .5s;
+
+        &:hover {
+            background-color: #fff;
+            color: #262628;
+        }
+    }
+}
+
+.footer {
+    padding: 4rem 0;
+    text-align: center;
+
+    &-content {
+        margin: 0 auto;
+        width: 30%;
+
+        &-header {
+            font-size: 3rem;
+            color: $service-card-text-color;
+            font-style: italic;
+            font-weight: 150;
+            margin-bottom: 2rem;
+        }
+
+        &-text {
+            font-size: 1.5rem;
+            color: #999;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &-delimiter {
+        margin-bottom: 2rem;
+    }
+
+    &-copyright {
+        color: $service-card-text-color;
+        font-size: 1.2rem;
+        margin-bottom: -3rem;
+    }
+}

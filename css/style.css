@@ -161,3 +161,106 @@ header {
     .service-card-button:hover {
       background: #383E4C;
       color: #fff; }
+
+.service-big {
+  background-color: #F2F2F2; }
+  .service-big-img {
+    display: block;
+    width: 100%;
+    margin-top: 4rem; }
+  .service-big-content {
+    padding: 5rem 3rem; }
+    .service-big-content-header {
+      font-size: 2rem;
+      margin-bottom: 1.5rem; }
+    .service-big-content-text {
+      font-size: 1.3rem;
+      line-height: 1.8; }
+    .service-big-content-button {
+      margin: 0;
+      margin-top: 2rem;
+      padding: 1.5rem 4rem; }
+
+.section-contact {
+  background-image: url(../img/bg-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 0;
+  text-align: center; }
+  .section-contact .contact-container {
+    width: 55%;
+    margin: auto;
+    margin-top: 5rem; }
+    .section-contact .contact-container .contact-header {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px #000; }
+    .section-contact .contact-container .contact-text {
+      background-color: rgba(242, 242, 242, 0.4);
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      color: #000;
+      border-radius: 10px;
+      margin-bottom: 1.5rem; }
+    .section-contact .contact-container .contact-form {
+      display: flex;
+      justify-content: space-between; }
+      .section-contact .contact-container .contact-form .inputs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 1 55%; }
+        .section-contact .contact-container .contact-form .inputs-container .contact-input {
+          flex: 0 1 25%;
+          background-color: rgba(242, 242, 242, 0.4);
+          border: none;
+          padding: 1rem;
+          border-radius: 10px; }
+          .section-contact .contact-container .contact-form .inputs-container .contact-input::placeholder {
+            color: #000; }
+      .section-contact .contact-container .contact-form .contact-form-text {
+        flex: 0 1 40%;
+        background-color: rgba(242, 242, 242, 0.4);
+        border: none;
+        padding: 1rem;
+        border-radius: 10px; }
+  .section-contact .contact-form-button {
+    text-decoration: none;
+    background-color: #262628;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem 3.5rem;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all .5s; }
+    .section-contact .contact-form-button:hover {
+      background-color: #fff;
+      color: #262628; }
+
+.footer {
+  padding: 4rem 0;
+  text-align: center; }
+  .footer-content {
+    margin: 0 auto;
+    width: 30%; }
+    .footer-content-header {
+      font-size: 3rem;
+      color: #666666;
+      font-style: italic;
+      font-weight: 150;
+      margin-bottom: 2rem; }
+    .footer-content-text {
+      font-size: 1.5rem;
+      color: #999;
+      margin-bottom: 5rem; }
+  .footer-delimiter {
+    margin-bottom: 2rem; }
+  .footer-copyright {
+    color: #666666;
+    font-size: 1.2rem;
+    margin-bottom: -3rem; }
