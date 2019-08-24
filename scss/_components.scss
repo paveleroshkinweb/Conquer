@@ -59,6 +59,14 @@ header {
         & > * {
             font-weight: 40;
         }
+
+        @media (max-width: $big-screen) {
+            top: 33%;
+        }
+
+        @media (max-width: $medium-small-screen) {
+            top: 25%;
+        }
     }
 
     &-primary {
@@ -82,15 +90,28 @@ header {
     justify-content: space-between;
 
     .card {
-        flex: 0 0 29%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 29%;
         background-color: $card-color;
 
         &-img {
             width: 100%;
+
+            @media (max-width: $small-screen) {
+                height: 23rem;
+            }
         }
 
         &-content {
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &-content-typography {
+            flex: 1 0 auto;
         }
 
         &-header {
@@ -102,7 +123,6 @@ header {
 
         &-text {
             font-size: 1.4rem;
-            margin-bottom: 3rem;
             word-wrap: break-word;
             letter-spacing: .1rem; 
         }
@@ -116,7 +136,19 @@ header {
             cursor: pointer;
             display: block;
             margin: auto;
+            flex: 0 0 auto;
+            margin-top: 1.5rem;
         }
+
+        @media (max-width: $small-screen) {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    @media (max-width: $small-screen) {
+        flex-direction: column;
     }
 }
 
@@ -153,6 +185,10 @@ header {
 .service-card-container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $small-screen) {
+        flex-direction: column;
+    }
 }
 
 .service-card {
@@ -160,6 +196,14 @@ header {
     flex-direction: column;
     flex: 0 1 23%;
     background-color: $card-color;
+
+    &-img {
+        width: 100%;
+
+        @media (max-width: $small-screen) {
+            height: 30rem;
+        }
+    }
 
     &-content {
         padding: 1rem 2rem;
@@ -203,6 +247,12 @@ header {
         &:hover {
             background: $primary-color;
             color: #fff;
+        }
+    }
+
+    @media (max-width: $small-screen) {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
         }
     }
 }
@@ -287,6 +337,12 @@ header {
                         color: #000;
                     }
                 }
+
+                @media (max-width: $mobile-screen) {
+                    & > * {
+                        margin-bottom: 2rem;
+                    }
+                }
             }
 
             .contact-form-text {
@@ -295,6 +351,10 @@ header {
                 border: none;
                 padding: 1rem;
                 border-radius: 10px;
+            }
+
+            @media (max-width: $mobile-screen) {
+                flex-direction: column;
             }
         }
     }
@@ -351,4 +411,18 @@ header {
         font-size: 1.2rem;
         margin-bottom: -3rem;
     }
+}
+
+#button-top {
+    height: 4rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.visible {
+    opacity: 1 !important;
 }

@@ -7,6 +7,18 @@
 
 html {
   font-size: 80%; }
+  @media (max-width: 1450px) {
+    html {
+      font-size: 70%; } }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 45%; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -56,6 +68,12 @@ header {
     text-align: center; }
     .heading-container > * {
       font-weight: 40; }
+    @media (max-width: 1450px) {
+      .heading-container {
+        top: 33%; } }
+    @media (max-width: 900px) {
+      .heading-container {
+        top: 25%; } }
   .heading-primary {
     margin-bottom: 1rem;
     font-size: 6rem;
@@ -71,12 +89,22 @@ header {
   display: flex;
   justify-content: space-between; }
   .card-container .card {
-    flex: 0 0 29%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 29%;
     background-color: #F2F2F2; }
     .card-container .card-img {
       width: 100%; }
+      @media (max-width: 700px) {
+        .card-container .card-img {
+          height: 23rem; } }
     .card-container .card-content {
-      padding: 1.5rem; }
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
+    .card-container .card-content-typography {
+      flex: 1 0 auto; }
     .card-container .card-header {
       font-weight: bold;
       font-size: 2rem;
@@ -84,7 +112,6 @@ header {
       margin-bottom: 1rem; }
     .card-container .card-text {
       font-size: 1.4rem;
-      margin-bottom: 3rem;
       word-wrap: break-word;
       letter-spacing: .1rem; }
     .card-container .card-button {
@@ -95,7 +122,15 @@ header {
       padding: 1rem 3rem;
       cursor: pointer;
       display: block;
-      margin: auto; }
+      margin: auto;
+      flex: 0 0 auto;
+      margin-top: 1.5rem; }
+    @media (max-width: 700px) {
+      .card-container .card:not(:last-child) {
+        margin-bottom: 5rem; } }
+  @media (max-width: 700px) {
+    .card-container {
+      flex-direction: column; } }
 
 .header-service {
   background-image: url(../img/bg-2.jpg);
@@ -122,12 +157,20 @@ header {
 .service-card-container {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 700px) {
+    .service-card-container {
+      flex-direction: column; } }
 
 .service-card {
   display: flex;
   flex-direction: column;
   flex: 0 1 23%;
   background-color: #F2F2F2; }
+  .service-card-img {
+    width: 100%; }
+    @media (max-width: 700px) {
+      .service-card-img {
+        height: 30rem; } }
   .service-card-content {
     padding: 1rem 2rem;
     text-align: center;
@@ -161,6 +204,9 @@ header {
     .service-card-button:hover {
       background: #383E4C;
       color: #fff; }
+  @media (max-width: 700px) {
+    .service-card:not(:last-child) {
+      margin-bottom: 5rem; } }
 
 .service-big {
   background-color: #F2F2F2; }
@@ -220,12 +266,18 @@ header {
           border-radius: 10px; }
           .section-contact .contact-container .contact-form .inputs-container .contact-input::placeholder {
             color: #000; }
+        @media (max-width: 600px) {
+          .section-contact .contact-container .contact-form .inputs-container > * {
+            margin-bottom: 2rem; } }
       .section-contact .contact-container .contact-form .contact-form-text {
         flex: 0 1 40%;
         background-color: rgba(242, 242, 242, 0.4);
         border: none;
         padding: 1rem;
         border-radius: 10px; }
+      @media (max-width: 600px) {
+        .section-contact .contact-container .contact-form {
+          flex-direction: column; } }
   .section-contact .contact-form-button {
     text-decoration: none;
     background-color: #262628;
@@ -264,3 +316,15 @@ header {
     color: #666666;
     font-size: 1.2rem;
     margin-bottom: -3rem; }
+
+#button-top {
+  height: 4rem;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  transition: opacity .5s; }
+
+.visible {
+  opacity: 1 !important; }
